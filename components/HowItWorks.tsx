@@ -4,44 +4,81 @@ import FadeInWhenVisible from "./FadeInWhenVisible";
 export default function HowItWorks() {
   const steps = [
     {
-      title: "Answer prompts in your own voice",
-      desc: "Speak freely — the app transcribes and summarizes your responses.",
-      image: "/step1-placeholder.jpg",
+      key: "record",
+      image: "/images/howitworks-record.jpg", // replace with your actual photo later
     },
     {
-      title: "Reflect and refine",
-      desc: "Review your words and edit them at your own pace.",
-      image: "/step2-placeholder.jpg",
+      key: "review",
+      image: "/images/howitworks-review.jpg",
     },
     {
-      title: "Receive your complete memoir",
-      desc: "A personalized book, written in your tone and style.",
-      image: "/step3-placeholder.jpg",
+      key: "relive",
+      image: "/images/howitworks-relive.jpg",
     },
   ];
 
   return (
-    <FadeInWhenVisible delay={0.2}>
-      <section className="py-24 px-6 bg-background dark:bg-background-dark">
-        <h2 className="text-4xl font-semibold text-center text-primary dark:text-primary-dark mb-16">
+    <section className="bg-[#FAF7F1] py-20">
+      <div className="max-w-6xl mx-auto px-6">
+        <h2 className="text-3xl font-serif text-center text-gray-800 mb-12">
+          {/* t("howItWorks.title") */}
           How It Works
         </h2>
-        <div className="grid md:grid-cols-3 gap-12 max-w-6xl mx-auto">
-          {steps.map((s, i) => (
-            <div key={i} className="bg-secondaryBackground dark:bg-secondaryBackground-dark rounded-2xl shadow-sm overflow-hidden">
-              <div className="relative h-48">
-                <Image src={s.image} alt={s.title} fill style={{ objectFit: "cover" }} />
+
+        <div className="space-y-20">
+          {steps.map((step, index) => (
+            <FadeInWhenVisible key={step.key} delay={index * 0.2}>
+              <div
+                className={`flex flex-col md:flex-row items-center gap-10 ${
+                  index % 2 === 1 ? "md:flex-row-reverse" : ""
+                }`}
+              >
+                <div className="w-full md:w-1/2 rounded-2xl overflow-hidden shadow-sm">
+                  <Image
+                    src={step.image}
+                    alt={step.key}
+                    width={600}
+                    height={400}
+                    className="object-cover w-full h-full"
+                  />
+                </div>
+
+                <div className="w-full md:w-1/2 text-center md:text-left">
+                  <p className="text-sm text-gray-500 mb-2 font-semibold">
+                    {`Step ${index + 1}`}
+                  </p>
+                  <h3 className="text-2xl font-serif text-gray-800 mb-2">
+                    {step.key === "record"
+                      ? "Record"
+                      : step.key === "review"
+                      ? "Review"
+                      : "Relive"}
+                  </h3>
+
+                  <h4 className="text-lg font-medium text-gray-600 mb-4 italic">
+                    {step.key === "record"
+                      ? "We’ll provide the inspiration — you provide the memories."
+                      : step.key === "review"
+                      ? "Your AI biographer refines your words while keeping your voice intact."
+                      : "When your story feels ready, bring it to life in moments."}
+                  </h4>
+
+                  <p className="text-gray-700 leading-relaxed">
+                    {step.key === "record" &&
+                      "Answer customized questions in your voice. Your AI biographer works from a selection of 12+ languages, so you can tell your story the way it’s meant to be told."}
+
+                    {step.key === "review" &&
+                      "Review the beautifully organized summaries of your recordings. You can make quick edits by typing, or simply give verbal instructions to adjust tone, flow, or add details."}
+
+                    {step.key === "relive" &&
+                      "Instantly create and customize your memoir in any language and tone — seamlessly transforming your spoken memories into stories you can share with the people who matter most."}
+                  </p>
+                </div>
               </div>
-              <div className="p-6 text-center">
-                <h3 className="text-xl font-semibold mb-2 text-primary dark:text-primary-dark">
-                  {s.title}
-                </h3>
-                <p className="text-textcolor dark:text-textcolor-dark text-base">{s.desc}</p>
-              </div>
-            </div>
+            </FadeInWhenVisible>
           ))}
         </div>
-      </section>
-    </FadeInWhenVisible>
+      </div>
+    </section>
   );
 }

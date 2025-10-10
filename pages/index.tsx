@@ -1,19 +1,26 @@
-import Hero from "../components/Hero";
-import Intro from "../components/Intro";
-import HowItWorks from "../components/HowItWorks";
+import Header from "../components/Header";
+import HeroSection from "../components/HeroSection";
 import Features from "../components/Features";
-import FAQ from "../components/FAQ";
+import HowItWorks from "../components/HowItWorks";
+import WhyItMatters from "../components/WhyItMatters";
+import CTASection from "../components/CTASection";
 import Footer from "../components/Footer";
 
 export default function Home() {
   return (
-    <main>
-      <Hero />
-      <Intro />
-      <HowItWorks />
-      <Features />
-      <FAQ />
-      <Footer />
-    </main>
+    <>
+      {/* Fixed header stays visible as you scroll */}
+      <Header />
+
+      {/* Main content starts below header */}
+      <main className="pt-[60px]">
+        <HeroSection />
+        <HowItWorks />	
+        <Features />
+        <WhyItMatters />
+        <CTASection />
+        <Footer />
+      </main>
+    </>
   );
 }
