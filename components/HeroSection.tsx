@@ -25,7 +25,7 @@ export default function HeroSection() {
           Our AI biographer helps turn them into a memoir to be treasured by generations to come.
         </p>
 
-        {/* App Store button */}
+        {/* App Store button! */}
         <div className="flex justify-center">
           <a
             href="https://apps.apple.com/your-app-link"
