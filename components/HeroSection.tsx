@@ -21,7 +21,7 @@ export default function HeroSection() {
           Share your story with the ones who matter most.
         </h1>
         <p className="text-lg md:text-xl text-white/90 leading-relaxed mb-8">
-          Your AI biographer helps turn the memories that have shaped your life into a memoir to be treasured by generations to come, all in your own voice and language.
+          Your AI biographer helps turn your life story into a memoir to be treasured by generations to come, all in your own voice and language.
         </p>
 
         {/* App Store button! */}

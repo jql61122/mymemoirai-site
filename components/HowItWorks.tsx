@@ -9,11 +9,11 @@ export default function HowItWorks() {
     },
     {
       key: "review",
-      image: "/images/howitworks-review.jpg",
+      image: "/images/iphone_editing.jpg",
     },
     {
       key: "relive",
-      image: "/images/howitworks-relive.jpg",
+      image: "/images/iphone_memoir.jpg",
     },
   ];
 
@@ -35,13 +35,13 @@ export default function HowItWorks() {
               >
                 {/* Image */}
                 <div className="w-full md:w-1/2 flex justify-center">
-                  <div className="max-w-[180px] md:max-w-[220px]">
+                  <div className="max-w-[260px] md:max-w-[320px] rounded-3xl overflow-hidden shadow-md">
                     <Image
                       src={step.image}
                       alt={step.key}
-                      width={220}
-                      height={440}
-                      className="w-full h-auto"
+                      width={320}
+                      height={640}
+                      className="w-full h-auto rounded-3xl"
                     />
                   </div>
                 </div>
