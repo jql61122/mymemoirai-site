@@ -5,7 +5,7 @@ export default function HowItWorks() {
   const steps = [
     {
       key: "record",
-      image: "/images/howitworks-record.jpg", // replace with your actual photo later
+      image: "/images/iphone_recording.jpg", 
     },
     {
       key: "review",
@@ -34,14 +34,16 @@ export default function HowItWorks() {
                 }`}
               >
                 {/* Image */}
-                <div className="w-full md:w-1/2 rounded-2xl overflow-hidden shadow-sm">
-                  <Image
-                    src={step.image}
-                    alt={step.key}
-                    width={600}
-                    height={400}
-                    className="object-cover w-full h-full"
-                  />
+                <div className="w-full md:w-1/2 flex justify-center">
+                  <div className="max-w-[180px] md:max-w-[220px]">
+                    <Image
+                      src={step.image}
+                      alt={step.key}
+                      width={220}
+                      height={440}
+                      className="w-full h-auto"
+                    />
+                  </div>
                 </div>
 
                 {/* Text */}
