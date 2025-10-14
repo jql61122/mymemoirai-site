@@ -33,6 +33,7 @@ export default function HowItWorks() {
                   index % 2 === 1 ? "md:flex-row-reverse" : ""
                 }`}
               >
+                {/* Image */}
                 <div className="w-full md:w-1/2 rounded-2xl overflow-hidden shadow-sm">
                   <Image
                     src={step.image}
@@ -43,11 +44,12 @@ export default function HowItWorks() {
                   />
                 </div>
 
+                {/* Text */}
                 <div className="w-full md:w-1/2 text-center md:text-left">
                   <p className="text-sm text-gray-500 mb-2 font-semibold">
                     {`Step ${index + 1}`}
                   </p>
-                  <h3 className="text-2xl font-serif text-gray-800 mb-2">
+                  <h3 className="text-2xl font-serif text-gray-800 mb-4">
                     {step.key === "record"
                       ? "Record"
                       : step.key === "review"
@@ -55,23 +57,15 @@ export default function HowItWorks() {
                       : "Relive"}
                   </h3>
 
-                  <h4 className="text-lg font-medium text-gray-600 mb-4 italic">
-                    {step.key === "record"
-                      ? "We’ll provide the inspiration — you provide the memories."
-                      : step.key === "review"
-                      ? "Your AI biographer refines your words while keeping your voice intact."
-                      : "When your story feels ready, bring it to life in moments."}
-                  </h4>
-
                   <p className="text-gray-700 leading-relaxed">
                     {step.key === "record" &&
-                      "Answer customized questions in your voice. Your AI biographer works from a selection of 12+ languages, so you can tell your story the way it’s meant to be told."}
+                      "You’ll be prompted with one question at a time to inspire your storytelling. Each question adapts based on your previous responses. Choose from any of 12+ languages so you can tell your story in the way that feels natural to you."}
 
                     {step.key === "review" &&
-                      "Review the beautifully organized summaries of your recordings. You can make quick edits by typing, or simply give verbal instructions to adjust tone, flow, or add details."}
+                      "Your AI biographer organizes your recordings into clear, readable text while preserving your tone and personality. Edit by typing or simply speak new instructions to refine wording, tone, or flow."}
 
                     {step.key === "relive" &&
-                      "Instantly create and customize your memoir in any language and tone — seamlessly transforming your spoken memories into stories you can share with the people who matter most."}
+                      "Once you’ve answered enough questions, instantly generate your memoir in any language or tone. Read it in-app or export to PDF to share seamlessly with the people who matter most."}
                   </p>
                 </div>
               </div>
