@@ -16,6 +16,7 @@ export default function Home() {
       <main className="pt-[60px]">
         <HeroSection />
         <HowItWorks />	
+        <div className="h-24 bg-gradient-to-b from-[#FAF7F1] to-[#FAF8F3]" />
         <Features />
         <WhyItMatters />
         <CTASection />

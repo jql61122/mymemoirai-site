@@ -67,9 +67,9 @@ export default function HowItWorks() {
   };
 
   return (
-    <section className="bg-[#FAF7F1] py-20">
+    <section className="bg-[#FAF7F1] py-12">
       <div className="max-w-6xl mx-auto px-6 text-center">
-        <h2 className="text-3xl font-serif text-gray-800 mb-10">How It Works</h2>
+        <h2 className="text-4xl font-semibold text-center mb-16 text-primary dark:text-primary-dark">How It Works</h2>
 
         {/* Viewport wrapper constrains height and hides overflow */}
         <div className="relative overflow-hidden rounded-2xl">
@@ -84,9 +84,9 @@ export default function HowItWorks() {
                 key={step.key}
                 /* FIX 1: Use a fixed height instead of min-height to stop first-slide growth.
                    Tweak these numbers to taste. */
-                  className={`flex-shrink-0 w-full min-h-[520px] md:min-h-[480px]
-                              snap-center border border-gray-200 shadow-sm rounded-2xl 
-                              p-6 md:p-8 bg-[#F2EBE1]`}
+                  className={`flex-shrink-0 w-full
+                    snap-center border border-gray-200 shadow-sm rounded-2xl 
+                    p-6 md:p-8 bg-[#F2EBE1]`}
 
               >
                 {/* FIX 2: Use grid to vertically center both columns reliably */}
