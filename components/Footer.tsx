@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="flex flex-col md:flex-row justify-center items-center gap-4">
         <Link href="/privacy" className="hover:underline">Privacy Policy</Link>
         <Link href="/terms" className="hover:underline">Terms of Use</Link>
-        <span>Contact: hello@mymemoirai.com</span>
+        <span>Contact: team@mymemoirai.com</span>
       </div>
     </footer>
   );
