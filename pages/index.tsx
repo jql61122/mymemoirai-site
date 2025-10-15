@@ -18,7 +18,6 @@ export default function Home() {
         <HowItWorks />	
         <Features />
         <WhyItMatters />
-        <CTASection />
         <Footer />
       </main>
     </>

@@ -1,6 +1,14 @@
 import Image from "next/image";
 
 export default function HeroSection() {
+  // Smooth scroll to “Why It Matters” section
+  const scrollToWhyItMatters = () => {
+    const target = document.getElementById("why-it-matters");
+    if (target) {
+      target.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <section className="relative flex flex-col items-center justify-center text-center h-[80vh] bg-[#FAF7F1] overflow-hidden">
       {/* Background image */}
@@ -24,12 +32,22 @@ export default function HeroSection() {
           Your AI biographer helps turn your life story into a memoir to be treasured by generations to come, all in your own voice and language.
         </p>
 
-        {/* App Store button! */}
+        {/* CTA Buttons */}
         <div className="flex justify-center">
+          {/* Desktop: Try It Today */}
+          <button
+            onClick={scrollToWhyItMatters}
+            className="hidden md:inline-block bg-[#FAF3E7] text-[#204B3D] font-medium px-6 py-3 rounded-full shadow-md hover:bg-white transition"
+          >
+            <b>Try It Today</b>
+          </button>
+
+          {/* Mobile: App Store badge */}
           <a
-            href="https://apps.apple.com/your-app-link"
+            href="https://apps.apple.com/app/mymemoir"
             target="_blank"
             rel="noopener noreferrer"
+            className="block md:hidden"
           >
             <Image
               src="/images/app-store-badge.svg"
@@ -39,7 +57,7 @@ export default function HeroSection() {
             />
           </a>
         </div>
-      </div> 
+      </div>
     </section>
   );
 }
