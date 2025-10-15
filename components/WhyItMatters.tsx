@@ -59,22 +59,23 @@ export default function WhyItMatters() {
                 />
               </div>
 
-              {/* Mobile App Store badge */}
-              <div className="block md:hidden">
-                <a
-                  href="https://apps.apple.com/app/mymemoir"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Image
-                    src="/images/app-store-badge.svg"
-                    alt="Download on the App Store"
-                    width={180}
-                    height={60}
-                    className="mx-auto"
-                  />
-                </a>
-              </div>
+				{/* Mobile App Store badge */}
+				<div className="block md:hidden py-6">
+				  <a
+				    href="https://apps.apple.com/app/mymemoir"
+				    target="_blank"
+				    rel="noopener noreferrer"
+				  >
+				    <Image
+				      src="/images/app-store-badge.svg"
+				      alt="Download on the App Store"
+				      width={180}
+				      height={60}
+				      className="mx-auto"
+				    />
+				  </a>
+				</div>
+
             </div>
           </FadeInWhenVisible>
         </div>
