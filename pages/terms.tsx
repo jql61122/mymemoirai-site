@@ -10,6 +10,25 @@ export default function TermsPage() {
           name="description"
           content="Read the Terms of Use for the MyMemoir app."
         />
+
+        <link rel="canonical" href="https://mymemoirai.com/terms" />
+
+        <meta property="og:title" content="Terms of Use – MyMemoir" />
+        <meta
+          property="og:description"
+          content="Read the Terms of Use for the MyMemoir app."
+        />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://mymemoirai.com/terms" />
+        <meta property="og:image" content="/og-image.jpg" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Terms of Use – MyMemoir" />
+        <meta
+          name="twitter:description"
+          content="Read the Terms of Use for the MyMemoir app."
+        />
+        <meta name="twitter:image" content="/og-image.jpg" />
       </Head>
 
       <main className="max-w-3xl mx-auto px-6 py-16 text-left text-gray-800 dark:text-gray-200 leading-relaxed">

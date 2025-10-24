@@ -10,6 +10,25 @@ export default function PrivacyPage() {
           name="description"
           content="Learn how MyMemoir handles your data securely and transparently."
         />
+
+        <link rel="canonical" href="https://mymemoirai.com/privacy" />
+
+        <meta property="og:title" content="Privacy Policy – MyMemoir" />
+        <meta
+          property="og:description"
+          content="Learn how MyMemoir handles your data securely and transparently."
+        />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://mymemoirai.com/privacy" />
+        <meta property="og:image" content="/og-image.jpg" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Privacy Policy – MyMemoir" />
+        <meta
+          name="twitter:description"
+          content="Learn how MyMemoir handles your data securely and transparently."
+        />
+        <meta name="twitter:image" content="/og-image.jpg" />
       </Head>
 
       <main className="max-w-3xl mx-auto px-6 py-16 text-left text-gray-800 dark:text-gray-200 leading-relaxed">
