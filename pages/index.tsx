@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Header from "../components/Header";
 import HeroSection from "../components/HeroSection";
 import Features from "../components/Features";
@@ -9,13 +10,18 @@ import Footer from "../components/Footer";
 export default function Home() {
   return (
     <>
-      {/* Fixed header stays visible as you scroll */}
-      <Header />
+      <Head>
+        <title>MyMemoir – Share Your Story</title>
+        <meta
+          name="description"
+          content="MyMemoir helps you capture and share your life stories effortlessly across generations."
+        />
+      </Head>
 
-      {/* Main content starts below header */}
+      <Header />
       <main className="pt-[60px]">
         <HeroSection />
-        <HowItWorks />	
+        <HowItWorks />
         <Features />
         <WhyItMatters />
         <Footer />
