@@ -51,7 +51,7 @@ export default function WhyItMatters() {
              {/* Desktop QR */}
               <div className="hidden md:block py-4">
                 <Image
-                  src="/images/qr-placeholder.jpg"
+                  src="/images/qr-code.png"
                   alt="QR code to download MyMemoir"
                   width={120}
                   height={120}
@@ -62,7 +62,7 @@ export default function WhyItMatters() {
 				{/* Mobile App Store badge */}
 				<div className="block md:hidden py-6">
 				  <a
-				    href="https://apps.apple.com/app/mymemoir"
+				    href="https://apps.apple.com/us/app/mymemoir-ai/id6751521258"
 				    target="_blank"
 				    rel="noopener noreferrer"
 				  >

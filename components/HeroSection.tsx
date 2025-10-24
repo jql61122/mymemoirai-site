@@ -44,7 +44,7 @@ export default function HeroSection() {
 
           {/* Mobile: App Store badge */}
           <a
-            href="https://apps.apple.com/app/mymemoir"
+            href="https://apps.apple.com/us/app/mymemoir-ai/id6751521258"
             target="_blank"
             rel="noopener noreferrer"
             className="block md:hidden"
