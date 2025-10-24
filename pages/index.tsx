@@ -38,6 +38,26 @@ export default function Home() {
           content="MyMemoir helps you capture and share your life stories effortlessly across generations."
         />
         <meta name="twitter:image" content="/og-image.jpg" />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "SoftwareApplication",
+              name: "MyMemoir",
+              operatingSystem: "iOS",
+              applicationCategory: "LifestyleApplication",
+              offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+              description:
+                "MyMemoir helps you record and share your life stories effortlessly across generations using AI.",
+              url: "https://mymemoirai.com",
+              logo: "https://mymemoirai.com/favicon.ico",
+              author: { "@type": "Organization", name: "MyMemoir" },
+            }),
+          }}
+        />
+
       </Head>
 
       <Header />
