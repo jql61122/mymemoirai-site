@@ -4,7 +4,14 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
+        {/* Favicon */}
         <link rel="icon" href="/favicon.ico" />
+
+        {/* Canonical link for SEO */}
+        <link rel="canonical" href="https://www.mymemoirai.com/" />
+
+        {/* Optional: theme color for browser tint */}
+        <meta name="theme-color" content="#274B34" />
       </Head>
       <body className="antialiased">
         <Main />
